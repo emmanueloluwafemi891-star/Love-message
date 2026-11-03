@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Message ❤️</title>
+<style>
+  * { box-sizing: border-box; }
+  :root { --pink:#ff4f81; --light:#ffd4e2; }
+  body {
+    margin:0; min-height:100vh; overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+    font-family:Arial, Helvetica, sans-serif; color:#fff;
+    background:radial-gradient(ellipse at 50% 45%, #52005d 0%, #26002e 48%, #100016 100%);
+  }
+  .glow {
+    position:fixed; width:70vw; height:45vh; left:15vw; top:30vh;
+    background:rgba(255,40,130,.14); filter:blur(65px); border-radius:50%;
+    pointer-events:none;
+  }
+  .hearts { position:fixed; inset:0; overflow:hidden; pointer-events:none; }
+  .float-heart {
+    position:absolute; bottom:-40px; color:#ff5b96; opacity:0;
+    animation:floatUp 7s linear infinite;
+    text-shadow:0 0 14px rgba(255,70,140,.5);
+  }
+  .float-heart:nth-child(1){left:8%;animation-delay:0s;font-size:22px}
+  .float-heart:nth-child(2){left:23%;animation-delay:2s;font-size:17px}
+  .float-heart:nth-child(3){left:42%;animation-delay:1s;font-size:28px}
+  .float-heart:nth-child(4){left:67%;animation-delay:3s;font-size:20px}
+  .float-heart:nth-child(5){left:84%;animation-delay:1.5s;font-size:25px}
+  @keyframes floatUp {
+    0%{transform:translateY(0) rotate(0);opacity:0}
+    15%{opacity:.75}
+    100%{transform:translateY(-115vh) translateX(35px) rotate(25deg);opacity:0}
+  }
+  .wrap { width:min(92vw,620px); position:relative; z-index:1; text-align:center; padding:24px 12px; }
+  .topline { font-size:12px; letter-spacing:4px; text-transform:uppercase; color:#ffb4d0; margin-bottom:26px; }
+  .slides { min-height:350px; display:flex; align-items:center; justify-content:center; }
+  .slide { display:none; width:100%; animation:appear .8s ease both; }
+  .slide.active { display:block; }
+  @keyframes appear { from{opacity:0;transform:translateY(16px) scale(.97)} to{opacity:1;transform:translateY(0) scale(1)} }
+  .big-heart { font-size:clamp(66px,18vw,100px); line-height:1.2; animation:beat 1.3s infinite; filter:drop-shadow(0 0 18px rgba(255,70,130,.7)); }
+  @keyframes beat { 0%,100%{transform:scale(1)} 15%{transform:scale(1.12)} 30%{transform:scale(1)} 45%{transform:scale(1.08)} }
+  h1 { font-size:clamp(27px,7vw,48px); line-height:1.2; margin:18px 0; letter-spacing:2px; text-shadow:0 0 18px rgba(255,70,130,.45); }
+  p { font-size:clamp(16px,4.4vw,21px); line-height:1.8; color:#ffeaf2; max-width:520px; margin:16px auto; }
+  .small-heart { color:#ff6099; }
+  .progress { display:flex; justify-content:center; gap:7px; margin:22px 0 12px; }
+  .dot { width:7px;height:7px;border-radius:50%;background:#74405e;transition:.3s; }
+  .dot.on { background:#ff76a8; box-shadow:0 0 10px #ff76a8; }
+  .count { font-size:12px; color:#d7a9c5; letter-spacing:2px; margin-top:8px; }
+  .note { font-size:11px; color:#a982a0; margin-top:20px; letter-spacing:1px; }
+  @media(max-height:650px){.slides{min-height:290px}.topline{margin-bottom:12px}.big-heart{font-size:65px}p{line-height:1.55}}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="hearts" aria-hidden="true">
+  <span class="float-heart">♥</span><span class="float-heart">♥</span><span class="float-heart">♥</span>
+  <span class="float-heart">♥</span><span class="float-heart">♥</span>
+</div>
+<main class="wrap">
+  <div class="topline">A little message for you <span class="small-heart">♥</span></div>
+  <section class="slides" aria-live="polite">
+    <article class="slide active">
+      <div class="big-heart">❤️</div>
+      <h1>A LITTLE SURPRISE</h1>
+      <p>I made this little corner of the internet just for you.</p>
+      <p class="small-heart">Take a moment and enjoy it 💕</p>
+    </article>
+    <article class="slide">
+      <div class="big-heart">💗</div>
+      <h1>YOU'RE SPECIAL</h1>
+      <p>Your kindness, your smile, and the way you make ordinary moments feel brighter mean a lot to me.</p>
+      <p>I'm really glad I get to know you.</p>
+    </article>
+    <article class="slide">
+      <div class="big-heart">💖</div>
+      <h1>THINGS I APPRECIATE</h1>
+      <p>I appreciate your care, your honesty, your laughter, and all the little things that make you uniquely you.</p>
+      <p>Never forget how much those things matter.</p>
+    </article>
+    <article class="slide">
+      <div class="big-heart">💌</div>
+      <h1>A LITTLE PROMISE</h1>
+      <p>I want to keep treating you with respect, listening to you, and appreciating you—not only on special days, but in the little everyday moments too.</p>
+      <p>You deserve kindness and sincerity.</p>
+    </article>
+    <article class="slide">
+      <div class="big-heart">❤️</div>
+      <h1>I LOVE YOU, BABE</h1>
+      <p>You mean so much to me, and I'm grateful you're part of my life.</p>
+      <p>Keep smiling, keep being you, and remember this little message whenever you need a reminder. <span class="small-heart">♥</span></p>
+      <p><strong>Made with love, just for you.</strong></p>
+    </article>
+  </section>
+  <div class="progress" id="progress" aria-label="Page progress">
+    <span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+  </div>
+  <div class="count" id="count">1 OF 5</div>
+  <div class="note">The pages change automatically every 4 seconds ✨</div>
+</main>
+<script>
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const dots = Array.from(document.querySelectorAll('.dot'));
+  const count = document.getElementById('count');
+  let current = 0;
+
+  function showSlide(index) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('on');
+    current = index;
+    slides[current].classList.add('active');
+    dots[current].classList.add('on');
+    count.textContent = `${current + 1} OF ${slides.length}`;
+  }
+
+  setInterval(() => {
+    showSlide((current + 1) % slides.length);
+  }, 4000);
+</script>
+</body>
+</html>
