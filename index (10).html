@@ -1,0 +1,297 @@
+<!DOCTYPE html>  <html>  <head>  
+  <title>A Little Message ❤️</title>    <style>  
+     {  
+      box-sizing: border-box;  
+    }  
+  
+    body {  
+      margin: 0;  
+      height: 100vh;  
+      background: linear-gradient(135deg, #14001c, #3d0045, #16001f);  
+  
+      display: flex;  
+      justify-content: center;  
+      align-items: center;  
+  
+      overflow: hidden;  
+      font-family: Arial, Helvetica, sans-serif;  
+    }  
+  
+    .container {  
+      text-align: center;  
+      color: white;  
+    }  
+  
+    /* OPEN BUTTON */  
+  
+    .open-button {  
+      padding: 15px 40px;  
+  
+      border: none;  
+      border-radius: 30px;  
+  
+      background-color: #ff4f81;  
+      color: white;  
+  
+      font-size: 20px;  
+      font-weight: bold;  
+  
+      cursor: pointer;  
+  
+      box-shadow: 0 0 20px rgba(255, 79, 129, 0.6);  
+  
+      transition: transform 0.2s, box-shadow 0.2s;  
+    }  
+  
+    .open-button:hover {  
+      transform: scale(1.08);  
+      box-shadow: 0 0 35px rgba(255, 79, 129, 0.9);  
+    }  
+  
+    .open-button:active {  
+      transform: scale(0.95);  
+    }  
+  
+  
+    /* LOVE MESSAGE */  
+  
+    .love-message {  
+      display: none;  
+    }  
+  
+    .heart {  
+      font-size: 90px;  
+  
+      animation: heartbeat 1.2s infinite;  
+  
+      filter: drop-shadow(  
+        0 0 20px rgba(255, 80, 130, 0.8)  
+      );  
+    }  
+  
+    .message {  
+      font-size: 55px;  
+      font-weight: bold;  
+      letter-spacing: 8px;  
+  
+      margin-top: 10px;  
+  
+      animation: revealMessage 2s ease forwards;  
+  
+      text-shadow:  
+        0 0 10px #ff4f81,  
+        0 0 25px #ff4f81,  
+        0 0 50px #ff4f81;  
+    }  
+  
+    .sub-message {  
+      margin-top: 20px;  
+  
+      font-size: 20px;  
+      letter-spacing: 3px;  
+  
+      animation: fadeIn 2s ease forwards;  
+      animation-delay: 1s;  
+  
+      opacity: 0;  
+    }  
+  
+  
+    /* FLOATING HEARTS */  
+  
+    .floating-heart {  
+      position: absolute;  
+  
+      bottom: -50px;  
+  
+      color: #ff4f81;  
+  
+      font-size: 25px;  
+  
+      animation: floatUp 5s linear infinite;  
+  
+      opacity: 0;  
+    }  
+  
+    .floating-heart:nth-child(1) {  
+      left: 10%;  
+      animation-delay: 0s;  
+    }  
+  
+    .floating-heart:nth-child(2) {  
+      left: 25%;  
+      animation-delay: 1s;  
+    }  
+  
+    .floating-heart:nth-child(3) {  
+      left: 45%;  
+      animation-delay: 2s;  
+    }  
+  
+    .floating-heart:nth-child(4) {  
+      left: 65%;  
+      animation-delay: 3s;  
+    }  
+  
+    .floating-heart:nth-child(5) {  
+      left: 80%;  
+      animation-delay: 1.5s;  
+    }  
+  
+    .floating-heart:nth-child(6) {  
+      left: 90%;  
+      animation-delay: 4s;  
+    }  
+  
+  
+    /* ANIMATIONS */  
+  
+    @keyframes heartbeat {  
+  
+      0% {  
+        transform: scale(1);  
+      }  
+  
+      15% {  
+        transform: scale(1.2);  
+      }  
+  
+      30% {  
+        transform: scale(1);  
+      }  
+  
+      45% {  
+        transform: scale(1.15);  
+      }  
+  
+      60% {  
+        transform: scale(1);  
+      }  
+  
+    }  
+  
+  
+    @keyframes revealMessage {  
+  
+      0% {  
+        opacity: 0;  
+        transform: scale(0.3);  
+      }  
+  
+      70% {  
+        opacity: 1;  
+        transform: scale(1.1);  
+      }  
+  
+      100% {  
+        opacity: 1;  
+        transform: scale(1);  
+      }  
+  
+    }  
+  
+  
+    @keyframes fadeIn {  
+  
+      from {  
+        opacity: 0;  
+        transform: translateY(20px);  
+      }  
+  
+      to {  
+        opacity: 1;  
+        transform: translateY(0);  
+      }  
+  
+    }  
+  
+  
+    @keyframes floatUp {  
+  
+      0% {  
+        bottom: -50px;  
+        opacity: 0;  
+      }  
+  
+      20% {  
+        opacity: 1;  
+      }  
+  
+      100% {  
+        bottom: 110vh;  
+        opacity: 0;  
+        transform: translateX(80px) rotate(30deg);  
+      }  
+  
+    }  
+  
+  
+    /* MOBILE */  
+  
+    @media (max-width: 600px) {  
+  
+      .message {  
+        font-size: 15px;  
+        letter-spacing: 4px;  
+      }  
+  
+      .heart {  
+        font-size: 70px;  
+      }  
+  
+      .sub-message {  
+        font-size: 15px;  
+      }  
+  
+    }  
+  
+  </style>  </head>  <body>    <!-- Floating hearts -->    <div class="floating-heart">♥</div>  
+  <div class="floating-heart">♥</div>  
+  <div class="floating-heart">♥</div>  
+  <div class="floating-heart">♥</div>  
+  <div class="floating-heart">♥</div>  
+  <div class="floating-heart">♥</div>    <div class="container">  <!-- OPEN BUTTON -->  
+
+<div id="open-screen">  
+
+  <button class="open-button" onclick="openMessage()">  
+    Open ❤️  
+  </button>  
+
+</div>  
+
+
+<!-- LOVE MESSAGE -->  
+
+<div class="love-message" id="love-message">  
+
+  <div class="heart">  
+    ❤️  
+  </div>  
+
+  <div class="message">  
+    Honestly, having you in my life means a lot to me. You're not just my bestie, you're someone I genuinely care about. The more we talk, the more I realize that my feelings for you are becoming more than just friendship. ❤️
+  </div>  
+
+  <div class="sub-message">  
+    You mean the world to me ❤️  
+  </div>  
+
+</div>
+
+  </div>    <script>  
+  
+    function openMessage() {  
+  
+      // Hide the opening screen  
+  
+      document.getElementById('open-screen').style.display = 'none';  
+  
+  
+      // Show the love message  
+  
+      document.getElementById('love-message').style.display = 'block';  
+  
+    }  
+  
+  </script>  </body>  </html>
